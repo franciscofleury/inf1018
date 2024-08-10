@@ -1,0 +1,10 @@
+1)
+	a) Um inteiro ocupa 4 bytes, mesmo que estes não estejam sendo utilizados. Além disso, foi possível perceber que os bytes estão organizados do mais significativo para o menos significativo, indicando que a arquitetura da máquina é Little Endian.
+	b) Um long ocupa 8 bytes, mesmo que estes não estejam sendo utilizados.
+	c) Um short ocupa 2 bytes, mesmo que o número exceda o limite possível de armazenamento.
+	d) Um char ocupa 1 byte, mesmo que o número exceda o limite possível de armazenamento.
+	e) Ao modificar o exemplo do enunciado foi possível descobrir que o código ascii dos seguintes caracteres: ("A", 65), (" ", 32), ("\n", 10), ("$", 36). Além disso, a função dump imprimiu um byte com o valor 0 no final, indicando a presença do carcter oculto "\0" representando o final da string.
+
+2)
+	a) A função string2num converte uma string de digitos em seu valor númerico, ou seja, a string "5" se tranformará no número 5. Para isso a função recupera o valor do número através da operação (s - '0'), a qual acha a diferença entre o valor ASCII de s e o valor ASCII de '0'. Além disso ao iterar por cada carácter a função guarda o acumulado em uma variável a e a multiplica por 10, indicando uma nova casa decimal.
+	c) A maior base que poderemos usar para esse esquema seria a base 36, pois ela incluiria todos os caracteres do alfabeto, restando apenas caracteres especiais.
