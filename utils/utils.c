@@ -7,3 +7,12 @@ void dump (void *p, int n) {
     p1++;
   }
 }
+
+int string2num (char *s, int base) {
+  int a = 0;
+  for (; *s; s++) {
+    int numeric_value = (isdigit(*s))? (*s - '0') : (*s - 'a' + 10);
+    a = a*base + numeric_value;
+  }
+  return a;
+}
