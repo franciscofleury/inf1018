@@ -16,3 +16,23 @@ int string2num (char *s, int base) {
   }
   return a;
 }
+
+void num2string(char *s, int num, int base) {
+  int used = num;
+  for (;used>0;) {
+    int unity = used;
+    int base_acc = 1;
+    while (unity > base) {
+      unity = unity / base;
+      base_acc = base_acc * base;
+    }
+    used = used % base_acc;
+    if (unity >= 10) {
+      *s = unity -10 + 'a';
+    } else {
+      *s = unity + '0';
+    }
+    s++;
+  }
+  *s = '\0';
+}
